@@ -8,7 +8,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #00bfff; /* Aksen biru */
+    color: #7a288a; /* Aksen ungu */
 }
 
 .table {
@@ -18,7 +18,7 @@ h1 {
 }
 
 th, td {
-    border: 1px solid #333; /* Batas berwarna abu-abu gelap */
+ border: 1px solid #333; /* Batas berwarna abu-abu gelap */
     padding: 10px;
     text-align: left;
     color: #fff; /* Warna teks putih */
@@ -45,8 +45,8 @@ td {
     padding: 10px;
     font-size: 14px;
     background-color: #333; /* Latar belakang elemen input hitam */
-    color: #00bfff; /* Teks aksen biru */
-    border: 1px solid #00bfff; /* Border aksen biru */
+    color: #7a288a; /* Teks aksen ungu */
+    border: 1px solid #7a288a; /* Border aksen ungu */
     border-radius: 5px;
 }
 
@@ -60,14 +60,14 @@ td {
 }
 
 .input-form button:hover {
-    background-color: #00bfff; /* Aksen biru pada hover */
+    background-color: #7a288a; /* Aksen ungu pada hover */
     color: #1a1a1a; /* Warna teks saat hover berubah menjadi hitam */
 }
 
 .input-form label {
     display: flex;
     align-items: center;
-    color: #00bfff; /* Teks aksen biru */
+    color: #7a288a; /* Teks aksen ungu */
 }
 
 /* Media Queries untuk responsivitas */
