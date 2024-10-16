@@ -1,91 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Watchlist</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-		}
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			margin-top: 20px;
-		}
-		th, td {
-			border: 1px solid #ccc;
-			padding: 10px;
-			text-align: left;
-		}
-		th {
-			background-color: #f2f2f2;
-		}
-		.input-form {
-			margin-bottom: 20px;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<h1>Watchlist</h1>
-	<form class="input-form">
-		<input type="text" id="title" placeholder="Enter title" required>
-		<select id="type" required>
-			<option value="">Select type</option>
-			<option value="Anime">Anime</option>
-			<option value="Film">Film</option>
-			<option value="Manga">Manga</option>
-			<option value="Drama">Drama</option>
-		</select>
-		<label for="watched">
-			<input type="checkbox" id="watched" name="watched">
-			I've watched/read this
-		</label>
-		<button type="submit">Add to watchlist</button>
-	</form>
+    <h1>Watchlist</h1>
+    <form class="input-form">
+        <input type="text" id="title" placeholder="Enter title" required>
+        <select id="type" required>
+            <option value="">Select type</option>
+            <option value="Anime">Anime</option>
+            <option value="Film">Film</option>
+            <option value="Manga">Manga</option>
+            <option value="Drama">Drama</option>
+        </select>
+        <label for="watched">
+            <input type="checkbox" id="watched" name="watched">
+            I've watched/read this
+        </label>
+        <button type="submit">Add to watchlist</button>
+    </form>
 
-	<table id="watchlist">
-		<thead>
-			<tr>
-				<th>No</th>
-				<th>Judul</th>
-				<th>Tipe</th>
-				<th>Status</th>
-			</tr>
-		</thead>
-		<tbody>
-			<!-- Data akan ditambahkan di sini -->
-		</tbody>
-	</table>
+    <table id="watchlist">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Judul</th>
+                <th>Tipe</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data akan ditambahkan di sini -->
+        </tbody>
+    </table>
 
-	<script>
-		const watchlistTableBody = document.querySelector('#watchlist tbody');
-		const inputForm = document.querySelector('.input-form');
-		const titleInput = document.getElementById('title');
-		const typeSelect = document.getElementById('type');
-		const watchedCheckbox = document.getElementById('watched');
-
-		let count = 1;
-
-		inputForm.addEventListener('submit', (e) => {
-			e.preventDefault();
-			const title = titleInput.value.trim();
-			const type = typeSelect.value;
-			const watched = watchedCheckbox.checked ? 'Sudah' : 'Belum';
-
-			if (title !== '' && type !== '') {
-				const row = document.createElement('tr');
-				row.innerHTML = `
-					<td>${count}</td>
-					<td>${title}</td>
-					<td>${type}</td>
-					<td>${watched}</td>
-				`;
-				watchlistTableBody.appendChild(row);
-				count++; // Increment count for the next entry
-				titleInput.value = '';
-				typeSelect.value = '';
-				watchedCheckbox.checked = false;
-			}
-		});
-	</script>
+    <script src="script.js"></script>
 </body>
 </html>
